@@ -28,82 +28,29 @@ client.user.setGame(`fun :)`,"http://twitch.tv/S-F")
   console.log('')
 });
 client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === "<help") {
-  let embed = new Discord.RichEmbed()
-          .setAuthor(message.author.username, message.author.avatarURL)
-           .setThumbnail(message.author.avatarURL)
-                 .setTimestamp()
-    .setDescription(`
-***
-:white_small_square:  ( اوامر الادارة***
-**
-للترحيب و للمغادرة اعمل شات اسمه
-:arrow_right:  wel او wlc
-
-للترحيب بدون مغادرة اعمل شات اسمه
-:arrow_right:  wlcm
-
-:small_orange_diamond:  البوت يكتب الي انت تكتبه في صورة
-<draw
-:small_orange_diamond:  لمسح الشات
-<clear
-:small_orange_diamond:  للباند
-<ban
-:small_orange_diamond:  للطرد
-<kick
-:small_orange_diamond:  للارسال لاعضاء السيرفر بشكل مطور
-<bc
-:small_orange_diamond:  للارسال لاعضاء السيرفر بشكل عادي
-<bc2
-:small_orange_diamond:  لأعطاء شخص ميوت بالسيرفر - يلزم ان يكون بالسيرفر رتبة Muted
-<mute
-:small_orange_diamond:  لفك الميوت عن شخص
-<unmute
-:small_orange_diamond:  لانشاء 140 لون
-<colorcr
-
-----
-**
-***
-:white_small_square: ( الاوامر العامة***
-**
-:small_blue_diamond:  سيرفر الدعم الفني للبوت
-<sup
-:small_blue_diamond:  للدعوة البوت لسيرفرك
-<inv
-:small_blue_diamond:  القرعة من 0 الي 100
-<roll
-:small_blue_diamond:  معلومات الشخص
-<id
-:small_blue_diamond:  عدد رتب السيرفر
-<roles
-:small_blue_diamond:  صورة اي عضو
-<av
-:small_blue_diamond:  صورة السيرفر
-<aser
-:small_blue_diamond:  بنج البوت
-<ping
-:small_blue_diamond:  لمعرفة حالة الاعضاء
-<mb
-:small_blue_diamond:  معلومات السيرفر
-<server
-:small_blue_diamond: يخلي البوت يرسل رسالة و يعدلها
-<edit
-:small_blue_diamond:  البوت يكتب اللي تكتبه
-<embed
-:small_blue_diamond:  حالة اعضاء السيرفر
-<mb
- ----
-رابط سيرفر البوت
-https://discord.gg/sKcUUEx
-
-رابط البوت
-https://discordapp.com/oauth2/authorize?client_id=377556299086561290&scope=bot&permissions=15416
-----
-**
-
-`)
+     if (message.content === ".servers") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#0000FF")
+  .addField("**Server: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
+if (message.content === '*help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("**:globe_with_meridians: الأوامر العامه**","** **")
+      .addField("***ping :stopwatch:**","**لـ سرعة إتصالك**")
+      .addField("***id :chart_with_downwards_trend:**","**عرض سرعه اتصال البوت**")
+      .addField("***avatar :camping:**","**لـ صور الشخص المختار**")
+      .addField("***roll :1234:**","**لـ القرعه من 1 - 100**")
+      .addField("***server :recycle:**","**لـ معلومات السيرفر**")
+      .addField("***roles :medal: **","**مسح محادثات الشات**")
+      .addField("***say :arrows_counterclockwise:**","**لـ يكرر الكلام اللى تقوله**")
+      .addField("***time :alarm_clock:**","**لـ معرفة الساعة**")
+      .addField("***date **","**لـ معرفة التاريخ**")
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
@@ -111,7 +58,46 @@ client.on('message', message => {
   .addField("**Server: **" , client.guilds.size)
   message.channel.sendEmbed(embed);
     }
-if (message.content === 'o!help') {
+if (message.content === '*help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("**:radioactive: أوامر الأداره**","** **")
+      .addField("***bc  :mega:**","**لـ البرودكاست**")
+      .addField("***clear :octagonal_sign:**","**لـ مسح الشات**")
+	  .addField("***createcolors :cyclone:**","** لـ اضافة 110 لون**")
+      .addField("***kick  :outbox_tray:**","**لـ طرد الأعضاء**")
+      .addField("***ban  :no_entry:**","**لـ حظر الأعضاء**")
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
+client.on('message', message => {
+     if (message.content === ".servers") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#0000FF")
+  .addField("**Server: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
+if (message.content === '*help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("** 🎶 اوامر الميوزك**","** **")
+      .addField("***play :musical_note:**","**لـ تشغيل المطلوب**")
+      .addField("***stop  :musical_keyboard:**","**لـ ايقاف المطلوب**")
+      .addField("***pause :musical_score:**","**لـ ايقاف المطوب مؤقت**")
+      .addField("***resume :mute: **","**لـ تشغيل المطوب بعد التوقيف**")
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
+client.on('message', message => {
+     if (message.content === ".servers") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#0000FF")
+  .addField("**Server: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
+if (message.content === '*help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
       .addField("** مبرمج البوت :wrench: **","**@!     ! Archimedesᴰᵉᵛ  **")
@@ -120,7 +106,7 @@ if (message.content === 'o!help') {
     }
 });
 client.on('message', message => {
-    if (message.content === 'o!roles') {
+    if (message.content === '*roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -129,7 +115,7 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-if (message.content.startsWith('o!ping')) {
+if (message.content.startsWith('*ping')) {
            if(!message.channel.guild) return;
 
 if (message.author.bot) return;
@@ -137,7 +123,7 @@ if (message.author.bot) return;
     }
 
 });
-var prefix = "o!";
+var prefix = "*";
 
 client.on('message', message => {
     if (message.author.bot) return;
@@ -164,7 +150,7 @@ client.on('message', message => {
 
 
 });
-var prefix = "o!";
+var prefix = "*";
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -192,7 +178,7 @@ client.on('message', message => {
     }
 });
 client.on("message", message => {
-    var prefix = "o!";
+    var prefix = "*";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -214,7 +200,7 @@ client.on("message", message => {
      
 });
 client.on('ready',  () => {
-  console.log('By : NASEEM');
+  console.log('By : i1Suhaib');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -242,7 +228,7 @@ if(message.content.split(' ')[0] == '*bc') {
     }
 })
     client.on('message', message => {
-     if (message.content === "o!id") {
+     if (message.content === "*id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
@@ -276,7 +262,7 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-if (message.content === "o!help") {
+if (message.content === "*help") {
 message.reply("**Done | تــم**")
 message.reply("**تم ارسال اوامر البوت في الخاص**")
 message.react("📩")
@@ -296,12 +282,12 @@ message.channel.sendEmbed(embed);
 });
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`O9 Bot- Script By : NASEEM`);
+      console.log(`OZX Bot- Script By : NASEEM`);
         console.log(`----------------`);
       console.log(`ON ${client.guilds.size} Servers '     Script By : NASEEM ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` ON ${client.guilds.size} Servers - Prefix o!help + by naseem`,"http://twitch.tv/S-F")
+client.user.setGame(` ON ${client.guilds.size} Servers - Prefix *help + by naseem`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 client.on("guildCreate", guild => {
@@ -358,6 +344,5 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
     }
-
- 
+});
 client.login(process.env.BOT_TOKEN);
