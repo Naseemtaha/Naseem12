@@ -211,11 +211,10 @@ to enable welcome message do channel name "wlc"
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
+
 
 ==================================================================
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 
 ==================================================================
 
@@ -236,7 +235,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-__~~The King Bot~~__ By: Peery#0609
+__~~Fun Bot~~__ By: ! Dark.ᵒᶰ#2222
 ╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱╭╮
 ╭╯╰┫┃╱╱╱╱┃┃┃╭╯╱╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮
 ╰╮╭┫╰━┳━━┫╰╯╯╭┳━╮╭━━┫╰╯╰┳━┻╮╭╯
@@ -310,9 +309,7 @@ __~~The King Bot~~__ By: Peery#0609
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 
 ==================================================================
 
@@ -363,12 +360,9 @@ client.on('message', message => {
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
 
- __Powered By__: Peery#0609
+ __Powered By__: ! Dark.ᵒᶰ#2222
 
-Server Support : https://discord.gg/twdHNJT
 
-https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
-`);
 
 message.channel.send('**تم الارسال في الخاص**');
 
